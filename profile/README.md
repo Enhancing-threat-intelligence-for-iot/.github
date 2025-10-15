@@ -8,15 +8,26 @@ A full‑stack app to explore IoT devices, link them to critical infrastructure 
 -   Color‑coded risk indicators and clean UI (SvelteKit + Tailwind + DaisyUI)
 
 ## 🐳 Quick Start ­(Docker)
-
 Prerequisites: Docker Desktop with Compose. For GPU, install appropriate drivers and Docker toolkit.
 
+<i>Using the `frontend-and-backend-images.tar` you can skip building the images local entirely:</i>
+
+First run this command to load the images:
+
+`docker load -i frontend-and-backend-images.tar`
+
+[you can download the `frontend-and-backend-images.tar` file here](https://drive.google.com/file/d/1_Kn03Pox7IW2C7wbpI9gT5pL-MwlSWoh/view?usp=sharing)
+
+Then run one of the following commands
+
+[Go to Docker main to get all the following Compose.yaml files](https://github.com/Enhancing-threat-intelligence-for-iot/Docker-Main) 
 -   CPU:
     -   `docker compose up -d --build`
 -   NVIDIA GPU:
     -   `docker compose -f Compose.yaml -f Compose.nvidia.yaml up -d`
 -   AMD GPU:
     -   `docker compose -f Compose.yaml -f Compose.amd.yaml up -d`
+
 ### 🛑 Stop the services
 - Remove the image and stop services 
     - `docker compose down -v` <br>
